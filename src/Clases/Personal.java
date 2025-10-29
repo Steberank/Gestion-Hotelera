@@ -1,3 +1,5 @@
+package Clases;
+
 public class Personal {
     private int dni;
     private int nombre;

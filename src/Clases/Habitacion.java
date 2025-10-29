@@ -1,11 +1,13 @@
+package Clases;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Habitacion {
     private int id;
-    private List<TipoCama> camas = new ArrayList<>();
+    private List<TipoCama> camas = new ArrayList<>();// ENUM UNA_PLAZA,DOS_PLAZAS_MATRIMONIAL,DOS_PLAZAS_CUCHETA
     private int cupoTotal = calcularCupoTotal();
-    private EstadoDeHabitacion estado;
+    private EstadoDeHabitacion estado;//ENUM LIMPIA, SUCIA
 
     public Habitacion() {
     }
@@ -60,4 +62,16 @@ public class Habitacion {
         }
         return total;
     }
+
+    public void mostrarHabitacion() {
+        System.out.println("===== HABITACIÓN ID: " + id + " =====");
+        System.out.println("Estado: " + estado);
+        System.out.println("Camas:");
+        for (TipoCama cama : camas) {
+            System.out.println(" - " + cama);
+        }
+        System.out.println("Cupo total: " + cupoTotal);
+        System.out.println("==================================");
+    }
+
 }

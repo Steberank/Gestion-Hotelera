@@ -1,8 +1,8 @@
+package Clases;
+
+import java.sql.SQLOutput;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Temporada {
     private LocalDate incioTemporada;
@@ -16,6 +16,22 @@ public class Temporada {
         this.historialDeReservas = historialDeReservas;
         this.personal = personal;
     }
+
+    public void addReserva(Reserva r){
+
+        historialDeReservas.add(r);
+
+    }
+
+
+    public void showHistorialReservas(){
+        System.out.println("Historial de reservas");
+        for(int i = 0; i < historialDeReservas.size(); i++){
+            System.out.println("RESERVA NUMERO " + i);
+            historialDeReservas.get(i).mostrarReserva();
+        }
+    }
+
 
     public LocalDate getIncioTemporada() {
         return incioTemporada;
