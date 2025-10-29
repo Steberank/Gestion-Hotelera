@@ -22,10 +22,6 @@ public class Reserva {
 
 
 
-
-
-
-
     public void mostrarReserva() {
         System.out.println("========== RESERVA ==========");
         System.out.println("Cliente: " + cliente.getNombre() + " " + cliente.getApellido() + " (DNI: " + cliente.getDni() + ")");

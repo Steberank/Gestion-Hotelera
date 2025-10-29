@@ -90,12 +90,12 @@ public class Hotel {
     }
 
     public boolean verificacionReserva(int idH, LocalDate CI, LocalDate CO) {
-
+        if (CI.isAfter(CO)) {
             for (Reserva r : reservas) {
 
                 if (r.getHabitacionReservada().getId() == idH) {
                     {
-                        if (CI.isAfter(CO)) {
+
                         //DOS SITUACIONES DE SOLAPAMIENTO DE FECHAS DE RESERVA
 
                         //1 CHECK IN DENTRO DEL INTERVALO DE RESERVA ANTERIOR
@@ -128,11 +128,11 @@ public class Hotel {
                 }
 
 
-            }else {
-                    System.out.println("Fechas invalidas");
-                    return false;
+            }
 
-        }
+        }else {
+            System.out.println("Fechas invalidas");
+            return false;
         }
 
         return false;
