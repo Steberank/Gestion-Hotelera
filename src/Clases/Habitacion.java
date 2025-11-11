@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Habitacion {
     private int id;
-    private List<TipoCama> camas = new ArrayList<>();// ENUM UNA_PLAZA,DOS_PLAZAS_MATRIMONIAL,DOS_PLAZAS_CUCHETA
+    private List<TipoCama> camas = new ArrayList<>();// ENUM: UNA_PLAZA,DOS_PLAZAS_MATRIMONIAL,DOS_PLAZAS_CUCHETA
     private int cupoTotal = calcularCupoTotal();
     private EstadoDeHabitacion estado;//ENUM LIMPIA, SUCIA
 

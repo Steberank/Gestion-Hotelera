@@ -1,63 +1,32 @@
 package Clases;
 
-public class Personal {
-    private int dni;
-    private int nombre;
-    private int apellido;
-    private int telefono;
-    private int salario; //POR MES
+import java.time.LocalDate;
+
+public class Personal extends Persona {
+    private String email;
     private Puesto rol;
+    private double salarioPorHora;
+    private LocalDate fechaDeIngreso;
+    private LocalDate finDeContrato;
+
+    public Personal(int dni, String nombres, String apellidos, LocalDate fecha_nacimiento, String email, Puesto rol, double salarioPorHora, LocalDate fechaDeIngreso, LocalDate finDeContrato, int telefono) {
+        super(dni, nombres, apellidos, fecha_nacimiento, telefono);
+        this.email = email;
+        this.rol = rol;
+        this.salarioPorHora = salarioPorHora;
+        this.fechaDeIngreso = fechaDeIngreso;
+        this.finDeContrato = finDeContrato;
+    }
 
     public Personal() {
     }
 
-    public Personal(int dni, int nombre, int apellido, int telefono, int salario, Puesto rol) {
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
-        this.salario = salario;
-        this.rol = rol;
+    public String getEmail() {
+        return email;
     }
 
-    public int getDni() {
-        return dni;
-    }
-
-    public void setDni(int dni) {
-        this.dni = dni;
-    }
-
-    public int getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(int nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(int apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
-    public int getSalario() {
-        return salario;
-    }
-
-    public void setSalario(int salario) {
-        this.salario = salario;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Puesto getRol() {
@@ -66,5 +35,29 @@ public class Personal {
 
     public void setRol(Puesto rol) {
         this.rol = rol;
+    }
+
+    public double getSalarioPorHora() {
+        return salarioPorHora;
+    }
+
+    public void setSalarioPorHora(double salarioPorHora) {
+        this.salarioPorHora = salarioPorHora;
+    }
+
+    public LocalDate getFechaDeIngreso() {
+        return fechaDeIngreso;
+    }
+
+    public void setFechaDeIngreso(LocalDate fechaDeIngreso) {
+        this.fechaDeIngreso = fechaDeIngreso;
+    }
+
+    public LocalDate getFinDeContrato() {
+        return finDeContrato;
+    }
+
+    public void setFinDeContrato(LocalDate finDeContrato) {
+        this.finDeContrato = finDeContrato;
     }
 }
