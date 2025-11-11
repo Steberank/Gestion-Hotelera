@@ -1,12 +1,11 @@
-package Clases;
-
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Cliente extends Persona{
+public class Cliente extends Persona {
     private String informacionExtra;
 
-    public Cliente(int dni, String nombres, String apellidos, LocalDate fecha_nacimiento, int telefono, String informacionExtra) {
+    public Cliente(int dni, String nombres, String apellidos, LocalDate fecha_nacimiento, int telefono,
+            String informacionExtra) {
         super(dni, nombres, apellidos, fecha_nacimiento, telefono);
         this.informacionExtra = informacionExtra;
     }

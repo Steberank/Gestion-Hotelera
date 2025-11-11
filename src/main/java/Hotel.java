@@ -1,7 +1,3 @@
-package Clases;
-
-import com.sun.security.jgss.GSSUtil;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +12,13 @@ public class Hotel {
     List<Personal> personal = new ArrayList<>();
     List<Temporada> historialTemporadas = new ArrayList<>();
 
-
     public Hotel(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
     }
 
-    public Hotel(String nombre, String direccion, LocalDate inicioTemporada, List<Habitacion> habitaciones, List<Reserva> reservas, List<Personal> personal, List<Temporada> historialTemporadas) {
+    public Hotel(String nombre, String direccion, LocalDate inicioTemporada, List<Habitacion> habitaciones,
+            List<Reserva> reservas, List<Personal> personal, List<Temporada> historialTemporadas) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.inicioTemporada = inicioTemporada;

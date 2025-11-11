@@ -1,5 +1,3 @@
-package Clases;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +5,7 @@ public class Habitacion {
     private int id;
     private List<TipoCama> camas = new ArrayList<>();// ENUM: UNA_PLAZA,DOS_PLAZAS_MATRIMONIAL,DOS_PLAZAS_CUCHETA
     private int cupoTotal = calcularCupoTotal();
-    private EstadoDeHabitacion estado;//ENUM LIMPIA, SUCIA
+    private EstadoDeHabitacion estado;// ENUM LIMPIA, SUCIA
 
     public Habitacion() {
     }
@@ -40,7 +38,6 @@ public class Habitacion {
         return cupoTotal;
     }
 
-
     public EstadoDeHabitacion getEstado() {
         return estado;
     }
@@ -50,7 +47,7 @@ public class Habitacion {
     }
 
     public int calcularCupoTotal() {
-        if(camas.isEmpty()){
+        if (camas.isEmpty()) {
             return 0;
         }
         int total = 0;

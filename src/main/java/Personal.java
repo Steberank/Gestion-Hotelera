@@ -1,5 +1,3 @@
-package Clases;
-
 import java.time.LocalDate;
 
 public class Personal extends Persona {
@@ -9,7 +7,8 @@ public class Personal extends Persona {
     private LocalDate fechaDeIngreso;
     private LocalDate finDeContrato;
 
-    public Personal(int dni, String nombres, String apellidos, LocalDate fecha_nacimiento, String email, Puesto rol, double salarioPorHora, LocalDate fechaDeIngreso, LocalDate finDeContrato, int telefono) {
+    public Personal(int dni, String nombres, String apellidos, LocalDate fecha_nacimiento, String email, Puesto rol,
+            double salarioPorHora, LocalDate fechaDeIngreso, LocalDate finDeContrato, int telefono) {
         super(dni, nombres, apellidos, fecha_nacimiento, telefono);
         this.email = email;
         this.rol = rol;
