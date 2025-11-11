@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ConfiguracionController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Hotel">
+            <content>
+              <VBox spacing="10.0">
+                <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+                <children>
+                  <HBox spacing="10.0">
+                    <children>
+                      <Label text="Nombre del Hotel:" />
+                      <TextField fx:id="nombreHotel" prefWidth="300.0" />
+                    </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                    <children>
+                      <Label text="Dirección:" />
+                      <TextField fx:id="direccionHotel" prefWidth="300.0" />
+                    </children>
+                  </HBox>
+                  <Label text="Habitaciones" />
+                  <TableView fx:id="tablaHabitaciones" prefHeight="350.0" prefWidth="780.0">
+                    <columns>
+                      <TableColumn fx:id="columnaId" prefWidth="150.0" text="ID" />
+                      <TableColumn fx:id="columnaNombre" prefWidth="150.0" text="Nombre" />
+                      <TableColumn fx:id="columnaUnaPlaza" prefWidth="150.0" text="Camas de una plaza" />
+                      <TableColumn fx:id="columnaMatrimoniales" prefWidth="150.0" text="Camas Matrimoniales" />
+                      <TableColumn fx:id="columnaCucheta" prefWidth="180.0" text="Camas cucheta" />
+                    </columns>
+                  </TableView>
+                  <HBox spacing="10.0">
+                    <children>
+                      <Button fx:id="btnAgregarHabitacion" mnemonicParsing="false" text="Agregar habitacion" />
+                      <Button fx:id="btnEliminarHabitacion" mnemonicParsing="false" text="Eliminar habitacion" />
+                    </children>
+                  </HBox>
+                </children>
+              </VBox>
+            </content>
+          </Tab>
+          <Tab text="Clientes">
+            <content>
+              <VBox spacing="10.0">
+                <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+              </VBox>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
+
